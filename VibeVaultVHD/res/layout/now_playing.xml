@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <TextView
+        android:id="@+id/PlayingLabelTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#041625"
+        android:layout_marginBottom="5dip"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:lines="1"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:text="Nothing Playing..."
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/text_height_label"
+        android:textStyle="italic" >
+    </TextView>
+    
+    <com.code.android.vibevault.DraggableListView
+	    android:id="@+id/PlayListListView"
+	    android:layout_width="wrap_content"
+	    android:layout_height="fill_parent"
+	    android:layout_weight="1" />
+        
+        
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/PlayerBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    
+
+    <RelativeLayout
+        android:id="@+id/ButtonHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip" >
+
+        <Button
+            android:id="@+id/PrevButton"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/mediapreviousbutton" >
+        </Button>
+
+        <Button
+            android:id="@+id/StopButton"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_toRightOf="@id/PrevButton"
+            android:background="@drawable/mediastopbutton" >
+        </Button>
+
+        <Button
+            android:id="@+id/PauseButton"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_toRightOf="@id/StopButton"
+            android:background="@drawable/mediapausebutton" >
+        </Button>
+
+        <Button
+            android:id="@+id/NextButton"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_toRightOf="@id/PauseButton"
+            android:background="@drawable/medianextbutton" >
+        </Button>
+    </RelativeLayout>
+
+    <TableLayout
+        android:id="@+id/ProgressBarNowPlayingScreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:orientation="vertical"
+        android:stretchColumns="1">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/TimeCurrent"
+                android:layout_width="wrap_content"
+                android:layout_height="30dip"
+                android:layout_column="0"
+                android:layout_span="1"
+                android:text="0:00"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" >
+            </TextView>
+
+            <SeekBar
+                android:id="@+id/SeekBarNowPlaying"
+                android:layout_width="fill_parent"
+                android:layout_height="30dip"
+                android:layout_column="1"
+                android:layout_marginBottom="5dip"
+                android:layout_span="2" >
+            </SeekBar>
+
+            <TextView
+                android:id="@+id/TimeTotal"
+                android:layout_width="fill_parent"
+                android:layout_height="30dip"
+                android:layout_column="3"
+                android:layout_span="1"
+                android:text="0:00"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" >
+            </TextView>
+        </TableRow>
+    </TableLayout>
+    </TableLayout>
+
+
+
+</LinearLayout>
