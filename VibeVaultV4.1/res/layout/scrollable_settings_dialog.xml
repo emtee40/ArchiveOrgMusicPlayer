@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@+id/ScrollView01"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:scrollbars="vertical"
+		android:scrollbarAlwaysDrawVerticalTrack="true" android:id="@+id/instructions_view">
+		<TextView android:id="@+id/NumResultsLabel"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentTop="true"
+			android:layout_alignParentLeft="true"
+			android:paddingLeft="15dip"
+			android:paddingRight="15dip"
+			android:textSize="@dimen/text_height_tall"
+			android:textStyle="bold"
+			android:textColor="#127DD4"
+			android:text="@string/search_results_number_prompt">
+			</TextView>
+
+			<TextView
+			    android:id="@+id/SeekBarValue"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_above="@+id/SortLabel"
+			    android:layout_alignParentLeft="true"
+			    android:paddingLeft="15dip"
+			    android:layout_centerVertical="true"
+			    android:text="20"
+			    android:textColor="#FFFFFF"
+			    android:textSize="@dimen/text_height_tall"
+			    android:textStyle="bold" >
+
+			</TextView>
+			
+		<SeekBar android:id="@+id/NumResultsSeekBar"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/NumResultsLabel"
+			android:layout_toRightOf="@+id/SeekBarValue"
+			android:layout_marginTop="5dip"
+			android:paddingLeft="15dip"
+			android:paddingRight="15dip"
+			android:max="40"
+			>
+			</SeekBar>
+			
+			<TextView
+			    android:id="@+id/SortLabel"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true"
+			    android:layout_below="@id/NumResultsSeekBar"
+			    android:paddingLeft="15dip"
+			    android:paddingTop="15dip"
+			    android:text="@string/search_type_prompt"
+			    android:textColor="#127DD4"
+			    android:textSize="@dimen/text_height_tall"
+			    android:textStyle="bold" >
+
+			</TextView>
+			
+			<Spinner 
+        android:id="@+id/SortSpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/SortLabel"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:textSize="@dimen/text_height_tall" />
+
+    <TextView
+        android:id="@+id/DateLabel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/SortSpinner"
+        android:paddingLeft="15dip"
+        android:paddingTop="15dip"
+        android:text="@string/search_date_prompt"
+        android:textColor="#127DD4"
+        android:textSize="@dimen/text_height_tall"
+        android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/DateSpinner"
+        	android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/DateLabel"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:textSize="@dimen/text_height_tall" />
+
+        <EditText
+            android:id="@+id/MonthText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/DateSpinner"
+            android:layout_toLeftOf="@+id/DayText"
+            android:hint="@string/month_text"
+            android:inputType="date"
+            android:lines="1"
+            android:maxLength="2"
+            android:textSize="@dimen/text_height_tall" />
+        <EditText
+            android:id="@+id/DayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/DateSpinner"
+            android:hint="@string/day_text"
+            android:inputType="date"
+            android:lines="1"
+            android:maxLength="2"
+            android:textSize="@dimen/text_height_tall" />
+            
+        <EditText
+            android:id="@+id/DateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/DateSpinner"
+            android:layout_alignBottom="@+id/DayText"
+            android:hint="@string/year_text"
+            android:inputType="date"
+            android:lines="1"
+            android:maxLength="4"
+            android:textSize="@dimen/text_height_tall" />
+        
+           <Button
+        android:id="@+id/SettingsOkayButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/MonthText"
+        android:layout_marginTop="5dip"
+        android:text="@string/okay_text"
+        android:layout_centerHorizontal="true">
+    </Button>
+		
+	</RelativeLayout>
+</ScrollView>
